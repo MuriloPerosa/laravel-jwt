@@ -32,7 +32,7 @@ php artisan key:generate
 1- Acessar o diretório do projeto pelo prompt de comando e executar o seguinte comando:
 
 ``` bash
-# initiate serve
+# initiate server
 php artisan serve
 ```
 
