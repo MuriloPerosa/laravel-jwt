@@ -39,4 +39,4 @@ php artisan serve
 ## Material
 
 - [PDF - Laravel](https://drive.google.com/file/d/1WKvHyaSmw-fgLJJL3R1LCQ15g3Ab7ALA/view?usp=sharing) - Laravel para API<br/>
-
+- [Vídeo - Aula 1](https://youtu.be/RrFDR_GNySs)<br/>
