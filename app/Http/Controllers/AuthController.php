@@ -37,4 +37,27 @@ class AuthController extends Controller
         $token = $this->auth_service->login($input['email'], $input['password']);
         return (new UserResource(auth()->user()))->additional($token);
     }
+
+    public function me()
+    {
+        return new UserResource(auth()->user());
+    }
+
+    public function refresh()
+    {
+        $token = $this->auth_service->refresh();
+        return (new UserResource(auth()->user()))->additional($token);
+    }
+
+    public function logout()
+    {
+        auth()->logout(true);
+        return response()->json(['success' => true]);
+    }
+
+    public function invalidate()
+    {
+        auth()->invalidate(true);
+        return response()->json(['success' => true]);
+    }
 }

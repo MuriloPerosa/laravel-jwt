@@ -24,5 +24,17 @@ Route::prefix('v1')->group(function(){
     // auth routes
     Route::middleware('auth:api')->group(function(){
         Route::apiResource('tasks', TaskController::class);
+
+        // api/v1/me - retorna dados do usuário logado
+        Route::get('me', [AuthController::class, 'me']);
+
+        // api/v1/refresh - atualiza o token do usuário
+        Route::get('refresh', [AuthController::class, 'refresh']);
+
+        // api/v1/logout - efetua o logout
+        Route::get('logout', [AuthController::class, 'logout']);
+
+        // api/v1/invalidate - efetua o logout e inválida o token
+        Route::get('invalidate', [AuthController::class, 'invalidate']);
     });
 });
